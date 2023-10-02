@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ekspedisi Wings-Order</title>
+</head>
+<body>
+    <header>
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="service.html">Service</a>
+            <a class="active" href="order.html">Order</a>
+            <a href="login.html">Login</a>
+            <a href="team.html">Our Team</a>
+          </div>
+          <a href="" class="logo">
+            <span>
+                <img src="logo1.png" alt="logo" class="logo-nav">
+            </span>
+          </a>
+
+    </header>
+
+    <section class="banner">
+        <h1>Order</h1>
+    </section>
+
+    <section class="order">
+        <h2>Masukkan Data Pengiriman</h2>
+    <form>
+    <table>
+        <tr>
+            <td><label for="nomor_resi">No Resi</label></td>
+            <td><input type="text" name="resi" id="resi"><br></td>
+        </tr>
+
+        <tr>
+            <td><label for="Pengirim">Nama Pengirim</label></td>
+            <td><input type="text" name="pengiriman" id="pengiriman"><br></td>
+        </tr>
+
+        <tr>
+            <td><label for="Penerima">Nama Penerima</label></td>
+            <td><input type="text" name="Penerima" id="Penerima"><br></td>
+        </tr>
+
+        <tr>
+            <td><label for="alamat">Alamat Penerima</label></td>
+            <td><textarea name="alamat" id="alamat"></textarea></td>
+        </tr>
+        
+        <tr>
+            <td><label for="noTelp">No. HP</label></td>
+            <td><input type="text" name="noHp" id="noHp"><br></td>
+        </tr>
+
+        <tr>
+            <td><label for="keterangan">Keterangan</label></td>
+            <td><input type="text" name="keterangan" id="keterangan"><br></td>
+        </tr>
+
+        <tr>
+        <td></td>
+        <td>
+            <button class="btn" type="submit">Kirim</button>
+            <button class="btn" type="reset">Batal</button>
+        </table>
+   </section>
+
+   <section class="lacakResi">
+        <div class="container">
+            <h2>Pencarian Nomor Resi</h2>
+            <form>
+                <div>
+                    <label>Masukkan Nomor Resi:</label>
+                    <input type="text" name="nomor_resi" class="form-control" placeholder="Masukkan nomor resi" required />
+                </div>
+                <button class="btn" type="submit">Kirim</button>
+            </form>
+    </section>
+
+    <section class="data">
+        <div class="table">
+            <h2>Data Pengiriman</h2>
+            <table rules="all" border="1">
+            <th>No. Resi</th><th>Nama Pengirim</th><th>Nama Penerima</th><th>Alamat</th><th>No HP</th><th>Keterangan</th>
+            <tr>
+                <td>["no_resi"]</td>
+                <td>["nama_pengirim"]</td>
+                <td>["nama_penerima"] </td>
+                <td>["alamat"]</td>
+                <td>["no_hp"]</td>
+                <td>["keterangan"]</td>
+            </tr>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; PT. Wings Logistic</p>
+        <br>
+        <p>@instagram</p>
+        <br>
+        <p>E-Mail customercare@wings.co.id</p>
+        <br>
+        <p>Contact Center (+628)...</p>
+        <br>
+
+    </footer>
+</body>
+</html>

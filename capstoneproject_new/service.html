@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekspedisi Wings-Service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a class="active" href="service.html">Service</a>
+            <a href="order.html">Order</a>
+            <a href="login.html">Login</a>
+            <a href="team.html">Our Team</a>
+          </div>
+          <a href="" class="logo">
+            <span>
+                <img src="logo1.png" alt="logo" class="logo-nav">
+            </span>
+          </a>
+    </header>
+
+    <section class="banner">
+        <h1> Service</h1>
+    </section>
+
+    <section class="services">
+        <h2>Service</h2>
+
+        <div class="menu">
+            <div class="card">
+                <h3>Lokal</h3>
+                <p>Merupakan pengiriman dalam satu kawasan daerah di dalam satu provinsi</p>
+                <ul>
+                    <li>Estimasi Pengiriman : 1-3 hari </li>
+                    <li>Pelayanan pengiriman terdapat di seluruh kota di Indonesia</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Domestik</h3>
+                <p>Merupakan pengiriman antarkota di selutuh Indonesia</p>
+                <ul>
+                    <li>Estimasi Pengiriman : 3-14 hari </li>
+                    <li>Pelayanan pengiriman terdapat di seluruh kota di Indonesia</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Mancanegara</h3>
+                <p>Merupakan pengiriman antarnegara</p>
+                <ul>
+                    <li>Estimasi Pengiriman : 7-45 hari </li>
+                    <li>Pelayanan pengiriman hanya dapat dilakukan di ibu kota provinsi seluruh Indonesia</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="ongkir">
+            <br>
+            <h2>Cek Ongkir</h2>
+            <label for="kota_asal">Kota Asal:</label>
+            <input type="text" id="kota_asal" required>
+            
+            <label for="kota_tujuan">Kota Tujuan:</label>
+            <input type="text" id="kota_tujuan" required>
+            
+            <label for="berat">Berat (kg):</label>
+            <input type="number" id="berat" step="0.01" required>
+            
+            <button id="cekButton" class="btn">Cek Ongkir</button>
+    
+           
+            <div id="hasil"></div>
+       
+            <button id="kembaliButton" class="btn" style="background-color: #e74c3c;">Kembali</button>
+        </div>
+    
+        <script>
+         
+            document.getElementById("kembaliButton").addEventListener("click", function () {
+          
+                window.history.back();
+            });
+    
+          
+            document.getElementById("cekButton").addEventListener("click", function () {
+                var kota_asal = document.getElementById("kota_asal").value;
+                var kota_tujuan = document.getElementById("kota_tujuan").value;
+                var berat = parseFloat(document.getElementById("berat").value);
+    
+               
+                var hasil = "<h2>Hasil Cek Ongkir</h2>";
+                hasil += "<strong>Kota Asal:</strong> " + kota_asal + "<br>";
+                hasil += "<strong>Kota Tujuan:</strong> " + kota_tujuan + "<br>";
+                hasil += "<strong>Berat:</strong> " + berat + " kg<br>";
+    
+               
+                var harga_per_kg = 5000; 
+                var total_harga = berat * harga_per_kg;
+    
+                hasil += "<strong>Total Harga:</strong> Rp " + total_harga + "<br>";
+    
+                document.getElementById("hasil").innerHTML = hasil;
+            });
+        </script>
+    </section>
+
+    <footer>
+        <p>&copy; PT. Wings Logistic</p>
+        <br>
+        <p>@instagram</p>
+        <br>
+        <p>E-Mail customercare@wings.co.id</p>
+        <br>
+        <p>Contact Center (+628)...</p>
+
+    </footer>
+</body>
+</html>
